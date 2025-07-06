@@ -15,4 +15,9 @@ function getComputerChoice() {
     }
 }
 
+function getHumanChoice() {
+    return prompt("Enter your pick: ");
+}
+
+console.log(getHumanChoice());
 console.log(getComputerChoice());

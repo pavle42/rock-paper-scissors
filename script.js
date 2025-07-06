@@ -80,6 +80,25 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection)
+function playGame() {
+    for (let i = 0; i < 5; i++)
+    {
+        playRound(getHumanChoice(), getComputerChoice());
+    }
+
+    if (humanScore > computerScore)
+    {
+        console.log(`You win the game! The score is ${humanScore}:${computerScore}.`)
+    }
+    else if (computerScore > humanScore)
+    {
+        console.log(`You lose the game! The score is ${humanScore}:${computerScore}.`)
+    }
+    else
+    {
+        console.log(`Tie! The score is ${humanScore}:${computerScore}.`)
+    }
+}
+
+playGame();
+
